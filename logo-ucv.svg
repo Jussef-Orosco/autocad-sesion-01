@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 64" role="img" aria-label="UCV Universidad C�sar Vallejo">
+  <defs>
+    <linearGradient id="neonRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff2a4a"/>
+      <stop offset="50%" stop-color="#e60026"/>
+      <stop offset="100%" stop-color="#b3001f"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Halo ne�n exterior -->
+  <rect x="4" y="6" width="192" height="52" rx="14" ry="14" fill="#ff0033" opacity="0.35" filter="url(#softGlow)"/>
+  <!-- Bot�n rojo ne�n -->
+  <rect x="8" y="8" width="184" height="48" rx="12" ry="12" fill="url(#neonRed)" stroke="#ff6b81" stroke-width="2" filter="url(#glow)"/>
+  <!-- Brillo superior del bot�n -->
+  <rect x="14" y="12" width="172" height="14" rx="8" ry="8" fill="#ffffff" opacity="0.18"/>
+  <!-- Letras UCV blancas -->
+  <text x="100" y="42" text-anchor="middle" font-family="Arial Black, Impact, Arial, sans-serif" font-size="32" font-weight="900" letter-spacing="6" fill="#ffffff" filter="url(#glow)">UCV</text>
+</svg>
